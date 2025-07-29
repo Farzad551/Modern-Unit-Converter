@@ -29,5 +29,5 @@ It allows users to convert values between various measurement units across multi
 
 ### 1. Clone the repo:
 ```bash
-git clone https://github.com/yourusername/unit-converter.git
-cd unit-converter
+git clone https://github.com/Farzad551/Modern-Unit-Converter.git
+
