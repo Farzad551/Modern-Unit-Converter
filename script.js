@@ -103,3 +103,9 @@ const conversionFunctions = {
     return (v * toBit[f]) / toBit[t];
   },
 };
+const categorySelect = document.getElementById("category");
+const fromUnitSelect = document.getElementById("fromUnit");
+const toUnitSelect = document.getElementById("toUnit");
+const valueInput = document.getElementById("value");
+const resultDiv = document.getElementById("result");
+const convertBtn = document.getElementById("convertBtn");
