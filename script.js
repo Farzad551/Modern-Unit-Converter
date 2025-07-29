@@ -109,3 +109,17 @@ const toUnitSelect = document.getElementById("toUnit");
 const valueInput = document.getElementById("value");
 const resultDiv = document.getElementById("result");
 const convertBtn = document.getElementById("convertBtn");
+categorySelect.addEventListener("change", () => {
+  const selected = categorySelect.value;
+  const list = units[selected];
+  fromUnitSelect.innerHTML = "";
+  toUnitSelect.innerHTML = "";
+  list.forEach((unit) => {
+    const opt1 = document.createElement("option");
+    opt1.value = unit;
+    opt1.textContent = unit;
+    const opt2 = opt1.cloneNode(true);
+    fromUnitSelect.appendChild(opt1);
+    toUnitSelect.appendChild(opt2);
+  });
+});
