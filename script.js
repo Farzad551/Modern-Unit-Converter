@@ -136,3 +136,4 @@ convertBtn.addEventListener("click", () => {
   const result = conversionFunctions[category](val, from, to);
   resultDiv.textContent = `Result: ${result.toFixed(4)}`;
 });
+categorySelect.dispatchEvent(new Event("change"));    // init on load
