@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2193b0;
+  color: #222;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+body.dark {
+  background-color: #0b3d91;
+  color: #eee;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 420px;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+body.dark .container {
+  background: rgba(20, 40, 70, 0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 0.04em;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: inherit;
+}
+
+select,
+input { 
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  background: #f5f8fa;
+  color: #222;
+  box-shadow: 0 3px 10px rgba(33, 147, 176, 0.2);
+}
+
+body.dark select,
+body.dark input {
+  background: #2b3a67;
+  color: #eee;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+select:focus,
+input:focus {
+  border-color: #1769aa;
+  box-shadow: 0 0 8px #1769aa;
+}
+
+body.dark select:focus,
+body.dark input:focus {
+  border-color: #6199e6;
+  box-shadow: 0 0 8px #6199e6;
+}
+
+button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 15px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+  background: #1769aa;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(23, 105, 170, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #6199e6;
+  box-shadow: 0 8px 20px rgba(97, 153, 230, 0.7);
+  transform: translateY(-3px);
+}
+
+body.dark button {
+  background: #6199e6;
+  color: #222;
+}
+
+body.dark button:hover {
+  background: #1769aa;
+  color: white;
+  box-shadow: 0 8px 20px rgba(23, 105, 170, 0.9);
+}
+
+#result {
+  margin-top: 28px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  min-height: 28px;
+  color: inherit;
+}
+
+ .toggle-switch {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.toggle-switch input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch label {
+  cursor: pointer;
+  width: 50px;
+  height: 28px;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-switch label::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch input[type="checkbox"]:checked + label {
+  background: #1769aa;
+  box-shadow: 0 0 8px #1769aa;
+}
+
+.toggle-switch input[type="checkbox"]:checked + label::after {
+  transform: translateX(22px);
+}
+
