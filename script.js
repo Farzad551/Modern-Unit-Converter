@@ -109,6 +109,7 @@ const toUnitSelect = document.getElementById("toUnit");
 const valueInput = document.getElementById("value");
 const resultDiv = document.getElementById("result");
 const convertBtn = document.getElementById("convertBtn");
+
 categorySelect.addEventListener("change", () => {
   const selected = categorySelect.value;
   const list = units[selected];
@@ -122,4 +123,16 @@ categorySelect.addEventListener("change", () => {
     fromUnitSelect.appendChild(opt1);
     toUnitSelect.appendChild(opt2);
   });
+});
+convertBtn.addEventListener("click", () => {
+  const category = categorySelect.value;
+  const from = fromUnitSelect.value;
+  const to = toUnitSelect.value;
+  const val = parseFloat(valueInput.value);
+  if (isNaN(val) || !from || !to) {
+    resultDiv.textContent = "Please enter a valid value and select units.";
+    return;
+  }
+  const result = conversionFunctions[category](val, from, to);
+  resultDiv.textContent = `Result: ${result.toFixed(4)}`;
 });
